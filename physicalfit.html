@@ -1,0 +1,103 @@
+<style>
+    @keyframes blink {
+        from {opacity:0}
+        to {opacity:1}
+    }
+
+    @keyframes extend {
+        0% {width:0px}
+        7.5% {width: 0px;}
+        15% {width: 450px;}
+        22.5% {width: 450px;}
+        30% {width: 0px;}
+        37.5% {width: 0px;} 
+        45% {width: 355px;}
+        52.5% {width: 355px;}
+        60% {width: 0px;}
+        67.5% {width: 0px;} 
+        75% {width: 495px;}
+        82.5% {width: 495px;} 
+        90% {width: 0px;}
+        100% {width: 0px;}         
+    }
+    .out{
+        display:inline-block;
+        
+        /* change to zero */
+        /* change to 70 */
+        font-size:70px;
+        overflow:hidden;
+        animation-name:extend;
+        animation-duration:12s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes kt1{
+        0%  {display:inline-block}
+        30% {display:inline-block}
+        37.5% {display:none}
+        100% {display:none}
+    }
+    #t1{
+        padding:0;
+        margin:0;
+        display:inline-block;
+        animation-name:kt1;
+        animation-duration:12s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes kt2{
+        0% {display:none}
+        30% {display:none}
+        37.5% {display:inline-block}
+        60% {display:inline-block}
+        67.5% {display:none}
+        100% {display:none}
+    }
+    #t2{
+        margin:0;
+        padding:0;
+        display:inline-block;
+        animation-name:kt2;
+        animation-duration:12s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes kt3{
+        0% {display:none}
+        60% {display:none}
+        67.5% {display:inline-block}
+        90% {display:inline-block}
+        100% {display:none}
+    }
+    #t3{
+        margin:0;
+        padding:0;
+        display:inline-block;
+        animation-name:kt3;
+        animation-duration:12s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .cursor{
+        display:inline-block;
+        border:solid 4px;
+        height:70px;
+        margin-bottom:0px;
+
+        animation-name:blink;
+        animation-duration:0.4s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+    }
+</style>
+
+<div class="out text">
+    <div style="width:max-content">
+        <spam id="t1">Physical Fitness</spam> <spam id="t2">Weight Gain</spam> <spam id="t3">Strength Training</spam>
+    </div>
+</div>
+<div class="cursor text">
+</div>

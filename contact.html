@@ -1,0 +1,219 @@
+<style>
+
+:root{
+   --main-color:#0b0501;
+   --sub-color:  rgb(0, 195, 255);
+   --white:#fff;
+   --border:.1rem solid aliceblue;
+}
+*{
+   font-family: 'Montserrat', sans-serif;
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+}
+
+*::selection{
+   background-color: var(--sub-color);
+   color: var(--main-color);
+}
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 2rem;
+}
+
+body{
+   background-color: var(--main-color);
+}
+/* contact form css */
+section{
+   padding: 3rem 2rem;
+   max-width: 1200px;
+   margin: 0 auto;
+}    
+
+.contact .row{
+   display: flex;
+   align-items: flex-start;
+   gap: 3rem;
+   flex-wrap: wrap;
+   margin-top: 52px;
+}
+
+.contact .row form{
+   flex: 1 1 40rem;
+   border: var(--border);
+   border-radius: .5rem;
+   padding: 2rem;
+   text-align: center;
+   margin-top: 25px;
+}
+
+.contact .row .faq{
+   flex: 1 1 40rem;
+}
+
+.contact .row form h3{
+   margin-bottom: 1rem;
+   border-radius: .5rem;
+   padding: 1.2rem;
+   color: var(--main-color);
+   background-color: var(--sub-color);
+   font-size: 2.2rem;
+   text-transform: capitalize;
+}
+
+.contact .row form .box{
+   padding: 1rem 0;
+   margin: 1rem 0;
+   border-bottom: var(--border);
+   font-size: 1.8rem;
+   color: var(--sub-color);
+   background:var(--main-color);
+   width: 100%;
+}
+
+.contact .row form .box::placeholder{
+   color: gray;
+}
+
+.contact .row form textarea{
+   height: 15rem;
+   resize: none;
+}
+/* faq css */
+.contact .row .faq .title{
+   padding-bottom: .5rem;
+   font-size: 2.5rem;
+   color: var(--sub-color);
+   text-transform: capitalize;
+   text-align: center;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 600px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0,0.15),
+                -6px -6px 10px -1px rgb(255,255,255,0.7);
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+    font-size: 14px;
+    font-weight:300;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::before{
+    content: '-';
+}
+
+</style>
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+    <div class="row">
+ 
+       <form action="" method="post">
+          <h3>send us message</h3>
+          <input type="text" name="name" required maxlength="50" placeholder="enter your name" class="box">
+          <input type="email" name="email" required maxlength="50" placeholder="enter your email" class="box">
+          <input type="number" name="number" required maxlength="10" min="0" max="9999999999" placeholder="enter your number" class="box">
+          <textarea name="msg" class="box" required maxlength="1000" placeholder="enter your message" cols="30" rows="10"></textarea>
+          <input type="submit" value="send message" name="send" class="btn">
+       </form>
+ 
+       <div class="faq">
+          <h3 class="title">Frequently Asked Questions/ FAQ's</h3>
+        <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion" id="first" checked>
+                <label for="first">How do i extra nights of accommodation?</label>
+                <div class="content">
+                    <p>
+                        If you'd like to arrive at your joining point hotel early or stick around post-tour to explore, contact us, and we can help you book extra nights of accommodation. 
+                    </p>
+
+                </div>
+
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="second">
+                <label for="second">Can I cancel my booking?</label>
+                <div class="content">
+                    <p>
+                        Can I cancel my booking without additional cost? You can cancel your reservation in accordance with the Terms of Termination.
+
+                    </p>
+
+                </div>
+
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="third">
+                <label for="third">Can i book a parking space?</label>
+                <div class="content">
+                    <p>
+                        We have a large parking area which can fit any type of vehicle. Buses and trailer trucks can park safely behind the hotel.
+
+                    </p>
+
+                </div>
+
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="fourth">
+                <label for="fourth">Where can i check-in?</label>
+                <div class="content">
+                    <p>
+                        When you first arrive at a hotel, the first thing you must do is to check in at the receptionist counter.
+                    </p>
+
+                </div>
+
+            </li>
+        </ul>
+ 
+    </div>
+ 
+ </section>
+ 
+ <!-- contact section ends -->

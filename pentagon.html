@@ -1,0 +1,64 @@
+
+<style>
+    @keyframes moving {
+        from {clip-path: polygon(
+            0% 0%,
+            100% 0%,
+            100% 100%,
+            100% 100%,
+            0% 100%,
+            0% 100%
+        ); transform:rotate(0deg)}
+        to {clip-path: polygon(
+            50% 0%,
+            50% 0%,
+            100% 50%,
+            70% 100%,
+            30% 100%,
+            0% 50%
+        ); transform:rotate(360deg)}
+    }
+    @keyframes ab{
+        from{transform: rotate(0deg);}
+        to{transform: rotate(-360deg);}
+
+    }
+    .pentagon{  
+        top:100px;     
+        height: 600px;
+        width: 600px;
+        clip-path: polygon(
+            50% 0%,
+            50% 0%,
+            100% 50%,
+            70% 100%,
+            30% 100%,
+            0% 50%
+        );
+       position: absolute;
+
+        background-color:white;
+
+        animation-name: moving;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .img{
+        /* transform-origin: 0 0; */
+        position:absolute;
+        height:856px;
+        width:856px;
+        animation-name: ab;
+        animation-duration: 3s;
+        animation-timing-function: linear ;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+</style>
+
+
+
+<!-- <div class="lightcontrol"></div> -->
+<div class="pentagon"><img class=img src="imgd.jpg"></div>

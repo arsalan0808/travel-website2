@@ -1,0 +1,55 @@
+<style>
+    @keyframes blink {
+        from {opacity:0}
+        to {opacity:1}
+    }
+    @keyframes extend {
+        0% {width:0;font-size:70px;}
+        10% {width:0;font-size:70px;}
+        30% {width:620px;font-size:70px;}
+        40% {width:620px;font-size:70px;}
+        50% {width:0;font-size:70px;}
+        60% {width:0;font-size:0;}
+        80% {width:650px;font-size:0;}
+        90% {width:650px;font-size:0;}
+        100% {width:0;font-size:0;}
+    }
+    .out{
+        display:inline-block;
+        overflow:hidden;
+        /* change to zero */
+        width:0;
+        /* change to 70 */
+        font-size:70px;
+
+        animation-name:extend;
+        animation-duration:10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    .int{
+        width:max-content;
+    }
+    .cursor{
+        display:inline-block;
+        border:solid 4px;
+        height:70px;
+        margin-bottom:0px;
+
+        animation-name:blink;
+        animation-duration:0.4s;
+        animation-iteration-count:infinite;
+        animation-timing-function: linear;
+    }
+    #bhai{
+        font-size:70px;
+    }
+</style>
+
+<div class="out text">
+    <div class="int">
+        <spam id="buddy">Hello buddy whats up</spam> <spam id="bhai">Hello bhai kya haal hai</spam>
+    </div>
+</div>
+<div class="cursor text">
+</div>

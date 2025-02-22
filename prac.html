@@ -1,0 +1,35 @@
+<style>
+    .ball{ 
+        border: solid 6px;
+        background-image: radial-gradient(gold,yellow,gold);
+        box-shadow: 0px 0px 20px inset gold;
+        height: 100px;
+        width:100px;
+        border-radius: 100px;
+    }
+    .string{
+        border: solid 3px;
+        height: 550px;
+        width: 10px;
+        background-image: linear-gradient(black,gray);
+    }
+    @keyframes moving {
+       from {transform:rotate(135deg)}
+       to{transform: rotate(225deg);}
+    }
+    .contain{
+        animation-name: moving;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+</style>
+
+<center>
+
+<div id="contain">
+    <div class="string"></div>
+    <div class="ball"></div>
+</div>
+
+</center>

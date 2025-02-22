@@ -1,0 +1,88 @@
+<style>
+     @keyframes moving {
+        from {clip-path: polygon(
+            50% 0%,
+            60% 0%,
+            100% 30%, /*T*/
+            100% 35%,
+            70% 30%,
+            70% 90%,  /*f1 */
+            60% 90%,
+            56% 55%,
+            53% 55%,
+            45% 100%, /*mf*/
+            35% 100%,
+            35% 55%,
+            30% 55%,
+            25% 95%, /*rf*/
+            15% 95%,
+            20% 55%,
+            15% 55%,
+            5% 75%, /*kf*/
+            0% 75%,
+            10% 45%,
+            15% 0%
+             
+            
+        )}
+        to {clip-path: polygon(
+            50% 0%,
+            60% 0%,
+            100% 15%, /*T*/
+            100% 20%,
+            70% 30%,
+            85% 90%, /*f*/
+            75% 90%,
+            56% 55%,
+            53% 55%,
+            60% 100%, /*mf*/
+            50% 100%,
+            35% 55%,
+            30% 55%,
+            10% 95%,  /*rf*/
+            0% 95%,
+            20% 55%,
+            15% 55%,
+            -10% 75%, /*kf*/
+            -20% 75%,
+            10% 45%,
+            15% 0%
+             
+            
+        )}
+}
+    .hand{  
+        transform: rotate(180deg);
+        height: 900px;
+        width: 700px;
+        background-image: linear-gradient(bisque,rgb(240, 158, 58),rgb(184, 140, 85));
+        animation-name: moving;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        }
+        @keyframes txt{
+            from{color: red;}
+            to{color: greenyellow;}
+        }
+        .txt{
+            animation-name: txt;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        }
+</style>
+<center>
+    <body bgcolor="black">
+    <div style="transform: scale(0.4); background-color: black;">
+<div class="hand"></div>
+<div class="txt" style="font-size: 150px;color: white;position: absolute;">I LOVE YOU ZUHAIB<br>
+    from baba 
+</div>
+</div>
+
+</body>
+
+</center>
